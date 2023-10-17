@@ -1,7 +1,10 @@
+#Get cmake version at runtime
 message("CMake version: ${CMAKE_VERSION}")
 
+# Use above cmake version 
 cmake_minimum_required(VERSION ${CMAKE_VERSION})
 
+# set name of current directory as project name
 project(aop)
 
 # Set C++ standard
@@ -14,8 +17,10 @@ file(GLOB SUB1_SOURCES "add/*.cpp")
 # Add all .cpp files from SubDir2
 file(GLOB SUB2_SOURCES "sub/*.cpp")
 
+# List all sources to generate executable file named as aop
 add_executable(aop ${SUB1_SOURCES} ${SUB2_SOURCES} main.cpp)
 
+# Link third party libraries to main executable file
 target_link_libraries(aop pthread protobuf)
 
 
