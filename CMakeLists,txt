@@ -1,0 +1,21 @@
+message("CMake version: ${CMAKE_VERSION}")
+
+cmake_minimum_required(VERSION ${CMAKE_VERSION})
+
+project(aop)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Add all .cpp files from SubDir1
+file(GLOB SUB1_SOURCES "add/*.cpp")
+
+# Add all .cpp files from SubDir2
+file(GLOB SUB2_SOURCES "sub/*.cpp")
+
+add_executable(aop ${SUB1_SOURCES} ${SUB2_SOURCES} main.cpp)
+
+target_link_libraries(aop pthread protobuf)
+
+
