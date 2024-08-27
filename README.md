@@ -2,13 +2,13 @@ Simple_example
 
 Create folder test. 
 
-Add MAINCMakeLists.txt to it. 
+Add main.cpp and MAINCMakeLists.txt to it. 
 
-Rename  MAINCMakeLists.txt to CMakeLists.txt
+Rename MAINCMakeLists.txt to CMakeLists.txt
 
 Create folder add in test folder.
 
-Add ADCCMakeLists.txt to it.
+Add ADCCMakeLists.txt, add.h and add.cpp to it.
 
 Rename ADDCMakeLists.txt to CMakeLists.txt
 
